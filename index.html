@@ -27,6 +27,7 @@
             display: flex;
             justify-content: center;
             background-color: #003262;
+            flex-wrap: wrap;
         }
         nav a {
             color: #FDB515;
@@ -35,6 +36,26 @@
             text-align: center;
         }
         nav a:hover {
+            background-color: #555;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .buttons button {
+            background-color: #003262;
+            color: #FDB515;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+        .buttons button:hover {
             background-color: #555;
         }
         section {
@@ -47,9 +68,8 @@
             display: block;
         }
         img {
-            max-width: 100%; 
-            max-height: 200px; 
-            height: auto; 
+            max-width: 100%;
+            height: auto;
         }
     </style>
     <script>
@@ -63,30 +83,40 @@
     </script>
 </head>
 <body onload="showTab('about')">
-    <header>
-        <h1>Kris Dong</h1>
-    </header>
-    <nav>
-        <a href="javascript:void(0)" onclick="showTab('about')">About Me</a>
-        <a href="javascript:void(0)" onclick="showTab('github')">GitHub Repository</a>
-        <a href="javascript:void(0)" onclick="showTab('linkedin')">LinkedIn</a>
-    </nav>
-    <section id="about" class="tab-content active">
-        <h2>About Me</h2>
-        <img src="KrisDong.jpg" alt="Profile_picture">
-        <p>Kris Dong is a tech-savvy individual with a persistent passion for hardware-software co-design in accelerating autonomous robotics and machine learning applications. She is currently working as a Ph.D. graduate student researcher at UC Berkeley, and affiliated with Berkeley Computer Architecture Research - SLICE lab and Berkeley Wireless Research Center, advised by Prof. Sophia Yakun Shao, and Prof. Christopher W. Fletcher.</p>
+    <div class="container">
+        <header>
+            <h1>Kris Dong</h1>
+        </header>
+        <nav>
+            <a href="javascript:void(0)" onclick="showTab('about')">About Me</a>
+            <a href="javascript:void(0)" onclick="showTab('research')">Research</a>
+            <a href="javascript:void(0)" onclick="showTab('talks')">Talks/Tutorials</a>
+        </nav>
+        <div class="buttons">
+            <button onclick="window.location.href='mailto:krisdong@berkeley.edu'">📧</button>
+            <button onclick="window.location.href='your-cv-link'">📄</button>
+            <button onclick="window.location.href='your-bio-link'">👤</button>
+            <button onclick="window.location.href='your-scholar-link'">🎓</button>
+            <button onclick="window.location.href='https://www.linkedin.com/in/chris-dong/'">🔗</button>
+            <button onclick="window.location.href='https://github.com/KrissyDong'">🐱</button>
+        </div>
+        <section id="about" class="tab-content active">
+            <h2>About Me</h2>
+            <img src="KrisDong.jpg" alt="ProfilePic">
+            <p>Kris Dong is a tech-savvy individual with a persistent passion for hardware-software co-design in accelerating autonomous robotics and machine learning applications. She is currently working as a Ph.D. graduate student researcher at UC Berkeley, and affiliated with Berkeley Computer Architecture Research - SLICE lab and Berkeley Wireless Research Center, advised by Prof. Sophia Yakun Shao, and Prof. Christopher W. Fletcher.</p>
 
-        <p>Kris’ research domain lies in building domain-specific accelerators for autonomous robotics. Her recent publication redefines the evaluation of specialized hardware for robotic systems. She built RoSÉ, a unified simulation platform that combines hardware and software, enabling pre-silicon, full-stack, closed-loop evaluation of robotic systems. For further analysis of the effect of architectures and software on robot behavior, she developed multi-stage robotics pipelines to evaluate dynamic end-to-end workloads to support autonomous navigation, optical-flow-based pose estimation, computer vision, occupancy grid mapping, and trajectory planning and control.</p>
-            
-        <p>Prior to joining Berkeley, she had worked as a Software Engineer at Tesla and a Product Manager at Amazon. She has 6+ years of programming experience through internships and projects involving hardware architecture design, large-scale system development, and full-stack software development. She holds a dual master's degree in Electrical Engineering and Computer Science Department of UC Berkeley; with a Bachelor of Science in Mathematics and Computer Science, and a Bachelor of Business Administration in Finance from UMass Amherst.</p>
-    </section>
-    <section id="github" class="tab-content">
-        <h2>GitHub Repository</h2>
-        <p><a href="https://github.com/KrissyDong">Visit my GitHub</a></p>
-    </section>
-    <section id="linkedin" class="tab-content">
-        <h2>LinkedIn</h2>
-        <p><a href="https://www.linkedin.com/in/chris-dong">Visit my LinkedIn</a></p>
-    </section>
+            <p>Kris’ research domain lies in building domain-specific accelerators for autonomous robotics. Her recent publication redefines the evaluation of specialized hardware for robotic systems. She built RoSÉ, a unified simulation platform that combines hardware and software, enabling pre-silicon, full-stack, closed-loop evaluation of robotic systems. For further analysis of the effect of architectures and software on robot behavior, she developed multi-stage robotics pipelines to evaluate dynamic end-to-end workloads to support autonomous navigation, optical-flow-based pose estimation, computer vision, occupancy grid mapping, and trajectory planning and control.</p>
+                
+            <p>Prior to joining Berkeley, she had worked as a Software Engineer at Tesla and a Product Manager at Amazon. She has 6+ years of programming experience through internships and projects involving hardware architecture design, large-scale system development, and full-stack software development. She holds a dual master's degree in Electrical Engineering and Computer Science Department of UC Berkeley; with a Bachelor of Science in Mathematics and Computer Science, and a Bachelor of Business Administration in Finance from UMass Amherst.</p>
+        </section>
+        <section id="research" class="tab-content">
+            <h2>Research</h2>
+            <p>Search for truth</p>
+        </section>
+        <section id="talks" class="tab-content">
+            <h2>Talks/Tutorials</h2>
+            <p>Tutorials</p>
+        </section>
+    </div>
 </body>
 </html>
