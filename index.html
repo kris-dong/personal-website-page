@@ -34,18 +34,33 @@
         section {
             padding: 20px;
         }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
     </style>
+    <script>
+        function showTab(tabId) {
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </head>
-<body>
+<body onload="showTab('about')">
     <header>
         <h1>Your Name</h1>
     </header>
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#github">GitHub Repository</a>
-        <a href="#linkedin">LinkedIn</a>
+        <a href="javascript:void(0)" onclick="showTab('about')">About Me</a>
+        <a href="javascript:void(0)" onclick="showTab('github')">GitHub Repository</a>
+        <a href="javascript:void(0)" onclick="showTab('linkedin')">LinkedIn</a>
     </nav>
-    <section id="about">
+    <section id="about" class="tab-content">
         <h2>About Me</h2>
         <p>Kris Dong is a tech-savvy individual with a persistent passion for hardware-software co-design in accelerating autonomous robotics and machine learning applications. She is currently working as a Ph.D. graduate student researcher at UC Berkeley, and affiliated with Berkeley Computer Architecture Research - SLICE lab and Berkeley Wireless Research Center, advised by Prof. Sophia Yakun Shao, and Prof. Christopher W. Fletcher.
 
@@ -53,11 +68,11 @@
             
             Prior to joining Berkeley, she had worked as a Software Engineer at Tesla and a Product Manager at Amazon. She has 6+ years of programming experience through internships and projects involving hardware architecture design, large-scale system development, and full-stack software development. She holds a dual master's degree in Electrical Engineering and Computer Science Department of UC Berkeley; with a Bachelor of Science in Mathematics and Computer Science, and a Bachelor of Business Administration in Finance from UMass Amherst.</p>
     </section>
-    <section id="github">
+    <section id="github" class="tab-content">
         <h2>GitHub Repository</h2>
         <p><a href="https://github.com/KrissyDong">Visit my GitHub</a></p>
     </section>
-    <section id="linkedin">
+    <section id="linkedin" class="tab-content">
         <h2>LinkedIn</h2>
         <p><a href="https://www.linkedin.com/in/chris-dong/">Visit my LinkedIn</a></p>
     </section>
