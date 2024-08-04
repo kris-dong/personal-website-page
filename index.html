@@ -44,20 +44,25 @@
             margin-top: 10px;
         }
         .buttons button {
-            background-color: #fff;
-            color: #FDB515;
-            border: 2px solid #003262;
+            background-color: #fff; 
+            border: 2px solid #003262; 
             border-radius: 50%;
             padding: 10px;
             margin: 5px;
             cursor: pointer;
-            width: 40px;
-            height: 40px;
+            width: 40px; 
+            height: 40px; 
             text-align: center;
-            font-size: 20px;
+            overflow: hidden;
+        }
+        .buttons button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
         .buttons button:hover {
-            background-color: #555;
+            background-color: #003262; 
         }
         section {
             padding: 20px;
@@ -68,9 +73,11 @@
         .tab-content.active {
             display: block;
         }
-        img {
+        img.center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
             max-width: 50%;
-            height: auto;
         }
     </style>
     <script>
@@ -94,12 +101,23 @@
             <a href="javascript:void(0)" onclick="showTab('talks')">Talks/Tutorials</a>
         </nav>
         <div class="buttons">
-            <button onclick="window.location.href='mailto:krisdong@berkeley.edu'">📧</button>
-            <button onclick="window.location.href='Kris_Dong_CV.pdf'">📄</button>
-            <button onclick="window.location.href='your-scholar-link'">🎓</button>
-            <button onclick="window.location.href='https://www.linkedin.com/in/chris-dong/'">🔗</button>
-            <button onclick="window.location.href='https://github.com/KrissyDong'">🐱</button>
+            <button onclick="window.location.href='mailto:krisdong@berkeley.edu'">
+                <img src="Icons/Gmail.png" alt="Email">
+            </button>
+            <button onclick="window.location.href='Kris_Dong_CV.pdf'">
+                <img src="Icons/CV.png" alt="CV">
+            </button>
+            <button onclick="window.location.href='https://scholar.google.com/citations?hl=en&user=E6RC_iIAAAAJ'">
+                <img src="Icons/GoogleScholar.png" alt="Scholar">
+            </button>
+            <button onclick="window.location.href='https://www.linkedin.com/in/chris-dong/'">
+                <img src="Icons/LinkedIn.png" alt="LinkedIn">
+            </button>
+            <button onclick="window.location.href='https://github.com/KrissyDong'">
+                <img src="Icons/Github.png" alt="GitHub">
+            </button>
         </div>
+        <section id="about" class="tab-content active">
         <section id="about" class="tab-content active">
             <h2>About Me</h2>
             <img src="KrisDong.jpg" alt="ProfilePic">
@@ -111,7 +129,8 @@
         </section>
         <section id="research" class="tab-content">
             <h2>Research</h2>
-            <p>Search for truth</p>
+            <p>RoSÉ: A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation</p>
+            <p>https://dl.acm.org/doi/abs/10.1145/3579371.3589099</p>
         </section>
         <section id="talks" class="tab-content">
             <h2>Talks/Tutorials</h2>
