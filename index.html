@@ -74,11 +74,22 @@
         .tab-content.active {
             display: block;
         }
-        img.center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 20%;
+        .about-entry {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            flex-direction: row-reverse;
+        }
+        .about-entry img {
+            max-width: 150px;
+            height: auto;
+            margin-left: 20px;
+        }
+        .about-entry .text {
+            flex: 1;
         }
         .entry {
             display: flex;
@@ -148,32 +159,37 @@
             </button>
         </div>
         <section id="about" class="tab-content active">
-            <h2>About Me</h2>
-            <img src="KrisDong.jpg" alt="ProfilePic" class="center">
-            <p>Shengjun Kris Dong is a tech-savvy individual with a persistent passion for hardware-software co-design in accelerating autonomous robotics and machine learning applications. She is currently working as a Ph.D. graduate student researcher at UC Berkeley, and affiliated with Berkeley Computer Architecture Research - SLICE lab and Berkeley Wireless Research Center, advised by <a href="https://people.eecs.berkeley.edu/~ysshao/">Prof. Sophia Yakun Shao</a> , and <a href="https://cwfletcher.github.io/">Prof. Christopher W. Fletcher</a>.</p>
-
-            <p>Kris’ research domain lies in building domain-specific accelerators for autonomous robotics. Her recent publication redefines the evaluation of specialized hardware for robotic systems. She built RoSÉ, a unified simulation platform that combines hardware and software, enabling pre-silicon, full-stack, closed-loop evaluation of robotic systems. For further analysis of the effect of architectures and software on robot behavior, she developed multi-stage robotics pipelines to evaluate dynamic end-to-end workloads to support autonomous navigation, optical-flow-based pose estimation, computer vision, occupancy grid mapping, and trajectory planning and control.</p>
-                
-            <p>Prior to joining Berkeley, she had worked as a Software Engineer at Tesla and a Product Manager at Amazon. She has 6+ years of programming experience through internships and projects involving hardware architecture design, large-scale system development, and full-stack software development. She holds a dual master's degree in Electrical Engineering and Computer Science Department of UC Berkeley; with a Bachelor of Science in Mathematics and Computer Science, and a Bachelor of Business Administration in Finance from UMass Amherst.</p>
-            <h2>Affiliated Groups</h2>
-            <p><a href="https://slice.eecs.berkeley.edu/ ">SpeciaLIzed Computing Ecosystems(SLICE)</a></p>
-            <p><a href="https://bar.eecs.berkeley.edu/">Berkeley Architecture Research (BAR)</a></p>
-            <p><a href="https://bwrc.eecs.berkeley.edu/">Berkeley Wireless Research Center(BWRC)</a></p>
-            <p><a href="https://spri.engr.illinois.edu/">Security and Privacy Research at Illinois (SPRAI)</a></p>
+            <div class="about-entry">
+                <img src="KrisDong.jpg" alt="ProfilePic">
+                <div class="text">
+                    <h2>About Me</h2>
+                    <p>Shengjun Kris Dong is a tech-savvy individual with a persistent passion for hardware-software co-design in accelerating autonomous robotics and machine learning applications. She is currently working as a Ph.D. graduate student researcher at UC Berkeley, and affiliated with Berkeley Computer Architecture Research - SLICE lab and Berkeley Wireless Research Center, advised by <a href="https://people.eecs.berkeley.edu/~ysshao/">Prof. Sophia Yakun Shao</a> , and <a href="https://cwfletcher.github.io/">Prof. Christopher W. Fletcher</a>.</p>
+                    
+                    <p>Kris’ research domain lies in building domain-specific accelerators for autonomous robotics. Her recent publication redefines the evaluation of specialized hardware for robotic systems. She built RoSÉ, a unified simulation platform that combines hardware and software, enabling pre-silicon, full-stack, closed-loop evaluation of robotic systems. For further analysis of the effect of architectures and software on robot behavior, she developed multi-stage robotics pipelines to evaluate dynamic end-to-end workloads to support autonomous navigation, optical-flow-based pose estimation, computer vision, occupancy grid mapping, and trajectory planning and control.</p>
+                        
+                    <p>Prior to joining Berkeley, she had worked as a Software Engineer at Tesla and a Product Manager at Amazon. She has 6+ years of programming experience through internships and projects involving hardware architecture design, large-scale system development, and full-stack software development. She holds a dual master's degree in Electrical Engineering and Computer Science Department of UC Berkeley; with a Bachelor of Science in Mathematics and Computer Science, and a Bachelor of Business Administration in Finance from UMass Amherst.</p>
+                    <h2>Affiliated Groups</h2>
+                    <p><a href="https://slice.eecs.berkeley.edu/">SpeciaLIzed Computing Ecosystems(SLICE)</a></p>
+                    <p><a href="https://bar.eecs.berkeley.edu/">Berkeley Architecture Research (BAR)</a></p>
+                    <p><a href="https://bwrc.eecs.berkeley.edu/">Berkeley Wireless Research Center(BWRC)</a></p>
+                    <p><a href="https://spri.engr.illinois.edu/">Security and Privacy Research at Illinois (SPRAI)</a></p>
+                </div>
+            </div>
         </section>
         <section id="research" class="tab-content">
+            <h2>Publication</h2>
             <div class="entry">
                 <div class="text">
-                    <h2>Publication</h2>
+
                     <p><a href="https://dl.acm.org/doi/abs/10.1145/3579371.3589099">RoSÉ: A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation</a></p>
                     <h3>LAD'24</h3>
                     <h4>IEEE International Workshop on LLM-Aided Design</h4>
                     <p>Charles Hong, Sahil Bhatia, Altan Haan, Kris Shengjun Dong, Dima Nikiforov, Alvin Cheung, Sophia Shao “LLM-Aided Compilation for Tensor Accelerators.” In the 1st IEEE International Workshop on LLM-Aided Design, IEEE, 2024.</p>
                 </div>
             </div>
+            <h2>Talk/Tutorial</h2>
             <div class="entry">
                 <div class="text">
-                    <h2>Talk/Tutorial</h2>
                     <h3>MICRO 2023</h3>
                     <h4>Toronto, Canada</h4>
                     <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Chengyi Lux Zhang, Borivoje Nikolic, Yakun Sophia Shao. “Designing, Deploying, and Evaluating Full-Stack Robotics Systems With RoSÉ.” Tutorial at MICRO 2023.</p>
@@ -181,7 +197,6 @@
                 </div>
             </div>
             <div class="entry">
-                <img src="Tutorials/ROSE_FL.jpg" alt="Tutorial">
                 <div class="text">
                     <h3>MICRO</h3>
                     <h4>IEEE/ACM International Symposium on Microarchitecture</h4>
