@@ -37,6 +37,7 @@
         }
         nav a:hover {
             background-color: #555;
+            color: #fff;
         }
         .buttons {
             display: flex;
@@ -79,6 +80,36 @@
             margin-right: auto;
             max-width: 20%;
         }
+        .entry {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .entry:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+        .entry img, .entry iframe {
+            max-width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .entry .text {
+            flex: 1;
+        }
+        .text h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #0056b3;
+        }
+        .text h3, .text h4 {
+            margin: 0.5em 0;
+        }
+        .text p {
+            margin: 0.5em 0;
+        }
     </style>
     <script>
         function showTab(tabId) {
@@ -97,7 +128,7 @@
         </header>
         <nav>
             <a href="javascript:void(0)" onclick="showTab('about')">About Me</a>
-            <a href="javascript:void(0)" onclick="showTab('research')">Research & Tutorials</a>
+            <a href="javascript:void(0)" onclick="showTab('research')">Research</a>
         </nav>
         <div class="buttons">
             <button onclick="window.location.href='mailto:krisdong@berkeley.edu'">
@@ -131,21 +162,40 @@
             <p><a href="https://spri.engr.illinois.edu/">Security and Privacy Research at Illinois (SPRAI)</a></p>
         </section>
         <section id="research" class="tab-content">
-            <h2>Research</h2>
-            <p><a href="https://dl.acm.org/doi/abs/10.1145/3579371.3589099">RoSÉ: A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation</a></p>
-            <h2>Talk/Tutorial</h2>
-            <h3>MICRO 2023</h3>
-            <h4>Toronto, Canada</h4>
-            <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Chengyi Lux Zhang, Borivoje Nikolic, Yakun Sophia Shao. “Designing, Deploying, and Evaluating Full-Stack Robotics Systems With RoSÉ.” Tutorial at MICRO 2023.</p>
-            <p>Dima Nikiforov, <b>Shengjun Kris Dong</b> “Design, Simulation, and Evaluation of Hardware for Full Stack Robotics Systems.” Oral Presentation, 2nd RoboARCH Workshop, MICRO, IEEE, 2023.</p>
-            <h3>MICRO</h3>
-            <h4>IEEE/ACM International Symposium on Microarchitecture</h4>
-            <img src="Tutorials/ROSE_FL.jpg" alt="Tutorial"width="512px" height="347px">
-            <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Borivoje Nikolic and Yakun Sophia Shao. “DryDock: A Co-Simulation Platform Enabling System-Level Pre-Silicon Evaluation of Robotics SoCs.” In the 55th Annual IEEE/ACM International Symposium on Microarchitecture , 1st RoboARCH Workshop, MICRO, IEEE, 2022.</p>
-            <h3>ILLIXR Consortium</h3>
-            <h4>University of Illinois at Urbana-Champaign</h4>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=o7P6AOBeGcs" frameborder="0" allowfullscreen></iframe>
-            <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Borivoje Nikolic and Yakun Sophia Shao. “A Co-Simulation Platform Enabling System-Level Pre-Silicon Evaluation of Robotics SoCs.” ILLIXR Consortium, Oral Presentation, University of Illinois at Urbana-Champaign, 2022.</p>
+            <div class="entry">
+                <div class="text">
+                    <h2>Publication</h2>
+                    <p><a href="https://dl.acm.org/doi/abs/10.1145/3579371.3589099">RoSÉ: A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation</a></p>
+                    <h3>LAD'24</h3>
+                    <h4>IEEE International Workshop on LLM-Aided Design</h4>
+                    <p>Charles Hong, Sahil Bhatia, Altan Haan, Kris Shengjun Dong, Dima Nikiforov, Alvin Cheung, Sophia Shao “LLM-Aided Compilation for Tensor Accelerators.” In the 1st IEEE International Workshop on LLM-Aided Design, IEEE, 2024.</p>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="text">
+                    <h2>Talk/Tutorial</h2>
+                    <h3>MICRO 2023</h3>
+                    <h4>Toronto, Canada</h4>
+                    <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Chengyi Lux Zhang, Borivoje Nikolic, Yakun Sophia Shao. “Designing, Deploying, and Evaluating Full-Stack Robotics Systems With RoSÉ.” Tutorial at MICRO 2023.</p>
+                    <p>Dima Nikiforov, <b>Shengjun Kris Dong</b> “Design, Simulation, and Evaluation of Hardware for Full Stack Robotics Systems.” Oral Presentation, 2nd RoboARCH Workshop, MICRO, IEEE, 2023.</p>
+                </div>
+            </div>
+            <div class="entry">
+                <img src="Tutorials/ROSE_FL.jpg" alt="Tutorial">
+                <div class="text">
+                    <h3>MICRO</h3>
+                    <h4>IEEE/ACM International Symposium on Microarchitecture</h4>
+                    <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Borivoje Nikolic and Yakun Sophia Shao. “DryDock: A Co-Simulation Platform Enabling System-Level Pre-Silicon Evaluation of Robotics SoCs.” In the 55th Annual IEEE/ACM International Symposium on Microarchitecture, 1st RoboARCH Workshop, MICRO, IEEE, 2022.</p>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="text">
+                    <h3>ILLIXR Consortium</h3>
+                    <h4>University of Illinois at Urbana-Champaign</h4>
+                    <iframe width="150" height="100" src="https://www.youtube.com/embed/o7P6AOBeGcs" frameborder="0" allowfullscreen></iframe>
+                    <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Borivoje Nikolic and Yakun Sophia Shao. “A Co-Simulation Platform Enabling System-Level Pre-Silicon Evaluation of Robotics SoCs.” ILLIXR Consortium, Oral Presentation, University of Illinois at Urbana-Champaign, 2022.</p>
+                </div>
+            </div>
         </section>
     </div>
 </body>
