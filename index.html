@@ -12,7 +12,7 @@
             background-color: #f4f4f4;
         }
         .container {
-            max-width: 1200px; 
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
@@ -43,6 +43,7 @@
             display: flex;
             justify-content: center;
             margin-top: 10px;
+            flex-wrap: wrap;
         }
         .buttons button {
             background-color: #fff;
@@ -51,8 +52,8 @@
             padding: 5px;
             margin: 5px;
             cursor: pointer;
-            width: 50px; 
-            height: 50px; 
+            width: 50px;
+            height: 50px;
             text-align: center;
             overflow: hidden;
         }
@@ -63,7 +64,7 @@
             border-radius: 50%;
         }
         .buttons button:hover {
-            background-color: #003262; 
+            background-color: #003262;
         }
         section {
             padding: 20px;
@@ -82,6 +83,7 @@
             border: 1px solid #ddd;
             background-color: #f9f9f9;
             flex-direction: row;
+            flex-wrap: wrap;
         }
         .about-entry img {
             max-width: 150px;
@@ -99,6 +101,7 @@
             padding: 20px;
             border: 1px solid #ddd;
             background-color: #f9f9f9;
+            flex-wrap: wrap;
         }
         .entry:nth-child(odd) {
             background-color: #f1f1f1;
@@ -123,13 +126,19 @@
             margin: 0.5em 0;
         }
         footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
             text-align: center;
             padding: 10px;
             background-color: #f1f1f1;
             border-top: 1px solid #ddd;
+        }
+        @media (max-width: 768px) {
+            .about-entry, .entry {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                padding: 10px;
+            }
         }
     </style>
     <script>
@@ -188,128 +197,132 @@
                 </div>
                 <div class="text">
                     <h2> Media Mentions</h2>
-                    <h3><a href="https://medium.com/the-coleman-fung-institute/chris-dong-meng-22-eecs-i-will-never-forget-the-slip-of-paper-that-i-used-to-forge-a-new-path-e35d17472df4" style="color: #3B7EA1;"></a>Chris Dong Meng, '22 (EECS): "I Will Never Forget the Slip of Paper That I Used to Forge a New Path</a></h3>
-                    <h4>The Coleman Fung Institute for Engineering Leadership, Medium</h4>
-
-            </div>
-        </section>
-        <section id="research" class="tab-content">
-            <h2 style="color:#003262;">Publication</h2>
-            <div class="entry">
-                <img src="Tutorials/ISCA_2023.png" alt="ISCA">
-                <div class="text">
-                    <h3><a href="https://dl.acm.org/doi/abs/10.1145/3579371.3589099" style="color: #3B7EA1;">RoSÉ: A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation</a></h3>
-                    <h3 style="color: #C4820E;">ISCA Distinguished Artifact Award</h3>
-                    <h4>ISCA '23: 50th Annual International Symposium on Computer Architecture</h4>
-                    <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Chengyi Lux Zhang, Seah Kim, Borivoje Nikolic, Yakun Sophia Shao</p>
+                    <h3><a href="https://medium.com/the-coleman-fung-institute/chris-dong-meng-22-e6e9e897ed7c" style="color: #003262; font-weight: bold;"> Chris Dong (MEng ’22)</a></h3>
+                    <h3><a href="https://news.ycombinator.com/item?id=32069950" style="color: #003262; font-weight: bold;"> UCB-BAR's RoSE Demo on Hacker News</a></h3>
+                    <h3><a href="https://people.eecs.berkeley.edu/~ysshao/" style="color: #003262; font-weight: bold;"> Sophia Yakun Shao - Research</a></h3>
+                    <h3><a href="https://news.berkeley.edu/story_jump/berkeley-talks-transcript-drew-weisenbergers" style="color: #003262; font-weight: bold;"> Berkeley Talks Podcast</a></h3>
                 </div>
-            </div>
-            <div class="entry">
-                <img src="Tutorials/LAD24.png" alt="LAD 24">
-                <div class="text">
-                    <h3 style="color: #3B7EA1;">LLM-Aided Compilation for Tensor Accelerators</h3>
-                    <h4>LAD '24: IEEE International Workshop on LLM-Aided Design</h4>
-                    <p>Charles Hong, Sahil Bhatia, Altan Haan, <b>Shengjun Kris Dong</b>, Dima Nikiforov, Alvin Cheung, Sophia Shao</p>
-                    <p>Tutorial & 2nd RoboARCH Workshop Presentation</p>
-                </div>
-            </div>
-            <h2 style="color:#003262;">Talk/Tutorial</h2>
-            <div class="entry">
-                <img src="Tutorials/micro-red.png" alt="MICRO 22">
-                <div class="text">
-                    <h3  style="color: #3B7EA1;">Design, Simulation, and Evaluation of Hardware for Full Stack Robotics Systems</h3>
-                    <h4>MICRO '23:IEEE/ACM International Symposium on Microarchitecture - Toronto, Canada</h4>
-                    <p><a href="https://ucb-bar.github.io/RoSE/tutorial" style="color: #3B7EA1;">RoSÉ Tutorial</a></p>
-                    <p>Oral Presentation, 2nd RoboARCH Workshop, MICRO, IEEE, 2023.</p>
-                    <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Chengyi Lux Zhang, Borivoje Nikolic, Yakun Sophia Shao. 
-                </div>
-            </div>
-            <div class="entry">
-                <img src="Tutorials/micro-red.png" alt="MICRO 22">
-                <div class="text">
-                    <h3  style="color: #3B7EA1;"><a href="https://ucb-bar.github.io/RoSE/tutorial" style="color: #3B7EA1;">RoSÉ Tutorial</a></h3>
-                    <h4>MICRO '23:IEEE/ACM International Symposium on Microarchitecture - Toronto, Canada</h4>
-                    <p>Oral Presentation, 2nd RoboARCH Workshop, MICRO, IEEE, 2023.</p>
-                    <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Chengyi Lux Zhang, Borivoje Nikolic, Yakun Sophia Shao. 
-                </div>
-            </div>
-            <div class="entry">
-                <img src="Tutorials/micro-red.png" alt="MICRO 22">  
-                <div class="text">
-                    <h3 style="color: #3B7EA1;">DryDock: A Co-Simulation Platform Enabling System-Level Pre-Silicon Evaluation of Robotics SoCs</h3>
-                    <h4>MICRO '22: IEEE/ACM International Symposium on Microarchitecture - Chicago, Illinois, USA</h4>
-                    <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Borivoje Nikolic and Yakun Sophia Shao</p>
-                </div>
-            </div>
-            <div class="entry">
-                <iframe width="150" height="100" src="https://www.youtube.com/embed/o7P6AOBeGcs" frameborder="0" allowfullscreen></iframe>
-                <div class="text">
-                    <h3><a href="https://www.youtube.com/embed/o7P6AOBeGcs" style="color: #3B7EA1;">A Co-Simulation Platform Enabling System-Level Pre-Silicon Evaluation of Robotics SoCs</a></h3>
-                    <h4>ILLIXR Consortium at University of Illinois at Urbana-Champaign</h4>
-                    <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Borivoje Nikolic and Yakun Sophia Shao.</p>
                 </div>
             </div>
         </section>
-        <section id="volunteer" class="tab-content">
-            <h2 style="color: #003262;">Teaching</h2>
-            <div class="entry">
-                <img src="Volunteer/FHL.png" alt="FHL">
-                <div class="text">
-                    <h3 style="color: #003262;">Lecturer</h3>
-                    <h4><a href="https://vivecenter.berkeley.edu/" style="color: #3B7EA1;">UC Berkeley EECS Department</a></h4>
-                    <p>Volunteered at UC Berkeley's Summer Campaign, <a href="https://roar.berkeley.edu/roar-academy/" style="color: #3B7EA1;">Robot Open Autonomous Racing (ROAR) Academy</a>. Job duty includes but is not limited to organizing and designing curriculum for students who want to learn entry-level skills about machine learning and embedded systems programming on edge devices.</p>
-                    <p style="font-style: italic;"><a href="https://www.instagram.com/p/C3QWruSJMwa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" style="color: #3B7EA1;">Related post</a></p>
-                </div>
+    </section>
+    <section id="research" class="tab-content">
+        <h2 style="color:#003262;">Publication</h2>
+        <div class="entry">
+            <img src="Tutorials/ISCA_2023.png" alt="ISCA">
+            <div class="text">
+                <h3><a href="https://dl.acm.org/doi/abs/10.1145/3579371.3589099" style="color: #3B7EA1;">RoSÉ: A Hardware-Software Co-Simulation Infrastructure Enabling Pre-Silicon Full-Stack Robotics SoC Evaluation</a></h3>
+                <h3 style="color: #C4820E;">ISCA Distinguished Artifact Award</h3>
+                <h4>ISCA '23: 50th Annual International Symposium on Computer Architecture</h4>
+                <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Chengyi Lux Zhang, Seah Kim, Borivoje Nikolic, Yakun Sophia Shao</p>
             </div>
-            <h2 style="color: #003262;">Mentoring</h2>
-            <div class="entry">
-                <img src="Volunteer/Mentoring.png" alt="Mentor">
-                <div class="text">
-                    <h3>I’ve had the privilege of working with some brilliant undergraduate students:</h3>
-                    <p><a href="https://www.minh02.com" style="color: #3B7EA1;">Minh Nguyen</a> (Fall 2023 - Present) - Undergraduate at UC Berkeley -> MS in EECS at UC Berkeley</p>
-                    <p>Widyadewi  Soedarmadji (Winter 2023 - Present) - Undergraduate at UC Berkeley -> PhD in CS at Tsinghua University</p>
-                    <p>Yuxin Jin (Summer 2024 - Present) Tsinghua University -> Visiting Researcher UC Berkeley</p> 
-                    <p>Chenxi Wan (Summer 2024 Present) Tsinghua University -> Visiting Researcher UC Berkeley</p>
-                </div>
+        </div>
+        <div class="entry">
+            <img src="Tutorials/LAD24.png" alt="LAD 24">
+            <div class="text">
+                <h3 style="color: #3B7EA1;">LLM-Aided Compilation for Tensor Accelerators</h3>
+                <h4>LAD '24: IEEE International Workshop on LLM-Aided Design</h4>
+                <p>Charles Hong, Sahil Bhatia, Altan Haan, <b>Shengjun Kris Dong</b>, Dima Nikiforov, Alvin Cheung, Sophia Shao</p>
+                <p>Tutorial & 2nd RoboARCH Workshop Presentation</p>
             </div>
-            <h2 style="color: #003262;">Volunteering</h2>
-            <div class="entry">
-                <img src="Volunteer/woi2.jpg" alt="WOI">
-                <div class="text">
-                    <h3 style="color: #003262;">Tech Lead</h3>
-                    <h4><a href="https://womenofisenberg.com/" style= "color: #3B7EA1;">Women of Isenberg Conference 2021</a></h4>
-                    <h5>Led a team to organize three annual conferences, including virtual seminars and workshops, successfully raising $70,000 and maintaining brand identity through various promotional activities. </h5>
-                </div>
+        </div>
+        <h2 style="color:#003262;">Talk/Tutorial</h2>
+        <div class="entry">
+            <img src="Tutorials/micro-red.png" alt="MICRO 22">
+            <div class="text">
+                <h3  style="color: #3B7EA1;">Design, Simulation, and Evaluation of Hardware for Full Stack Robotics Systems</h3>
+                <h4>MICRO '23:IEEE/ACM International Symposium on Microarchitecture - Toronto, Canada</h4>
+                <p><a href="https://ucb-bar.github.io/RoSE/tutorial" style="color: #3B7EA1;">RoSÉ Tutorial</a></p>
+                <p>Oral Presentation, 2nd RoboARCH Workshop, MICRO, IEEE, 2023.</p>
+                <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Chengyi Lux Zhang, Borivoje Nikolic, Yakun Sophia Shao. 
             </div>
-            <div class="entry">
-                <img src="Volunteer/Tesla_Career.jpg" alt="Tesla_Career">
-                <div class="text">
-                    <h3 style= "color: #003262;">Organizer</a></h3>
-                    <h4><a href="https://www.tesla.com/event/uc-berkeley--eecs-career-fair" style= "color: #3B7EA1;">Tesla Career Day</a></h4>
-                    <h5>Coordinated career fairs and networking events to promote company culture and career opportunities, mentored students, and engaged with local colleges and community organizations to build candidate pipelines. </h5>
-                </div>
+        </div>
+        <div class="entry">
+            <img src="Tutorials/micro-red.png" alt="MICRO 22">
+            <div class="text">
+                <h3  style="color: #3B7EA1;"><a href="https://ucb-bar.github.io/RoSE/tutorial" style="color: #3B7EA1;">RoSÉ Tutorial</a></h3>
+                <h4>MICRO '23:IEEE/ACM International Symposium on Microarchitecture - Toronto, Canada</h4>
+                <p>Oral Presentation, 2nd RoboARCH Workshop, MICRO, IEEE, 2023.</p>
+                <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Chengyi Lux Zhang, Borivoje Nikolic, Yakun Sophia Shao. 
             </div>
-            <div class="entry">
-                <img src="Volunteer/Hacker413.png" alt="Hacker413">
-                <div class="text">
-                    <h3 style="color: #003262;">Director</h3>
-                    <<h3><a href="https://www.hackher413.com/" style= "color: #3B7EA1;">Hack(H)er413</a></h3>
-                    <h5>Directed a team to organize hackathons with diverse workshops and panels, supporting a community of over 1300 women and non-binary individuals in technology, and secured over $6000 in sponsorships.</h5>
-                </div>
+        </div>
+        <div class="entry">
+            <img src="Tutorials/micro-red.png" alt="MICRO 22">  
+            <div class="text">
+                <h3 style="color: #3B7EA1;">DryDock: A Co-Simulation Platform Enabling System-Level Pre-Silicon Evaluation of Robotics SoCs</h3>
+                <h4>MICRO '22: IEEE/ACM International Symposium on Microarchitecture - Chicago, Illinois, USA</h4>
+                <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Borivoje Nikolic and Yakun Sophia Shao</p>
             </div>
-            <div class="entry">
-                <img src="Volunteer/ARPS.png" alt="ARPS">
-                <div class="text">
-                    <h3 style="color: #003262;">Organizer</h3>
-                    <h4>VELA Program of Amherst Regional Middle School</h4>
-                    <h5>At the VELA Program of Amherst Regional Middle School, I organized afterschool clubs, assisted with curriculum implementation and homework support, monitored student progress, and participated in weekly reflection sessions and program evaluation.</h5>
-                </div>
+        </div>
+        <div class="entry">
+            <iframe width="150" height="100" src="https://www.youtube.com/embed/o7P6AOBeGcs" frameborder="0" allowfullscreen></iframe>
+            <div class="text">
+                <h3><a href="https://www.youtube.com/embed/o7P6AOBeGcs" style="color: #3B7EA1;">A Co-Simulation Platform Enabling System-Level Pre-Silicon Evaluation of Robotics SoCs</a></h3>
+                <h4>ILLIXR Consortium at University of Illinois at Urbana-Champaign</h4>
+                <p>Dima Nikiforov, <b>Shengjun Kris Dong</b>, Borivoje Nikolic and Yakun Sophia Shao.</p>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+    <section id="volunteer" class="tab-content">
+        <h2 style="color: #003262;">Teaching</h2>
+        <div class="entry">
+            <img src="Volunteer/FHL.png" alt="FHL">
+            <div class="text">
+                <h3 style="color: #003262;">Lecturer</h3>
+                <h4><a href="https://vivecenter.berkeley.edu/" style="color: #3B7EA1;">UC Berkeley EECS Department</a></h4>
+                <p>Volunteered at UC Berkeley's Summer Campaign, <a href="https://roar.berkeley.edu/roar-academy/" style="color: #3B7EA1;">Robot Open Autonomous Racing (ROAR) Academy</a>. Job duty includes but is not limited to organizing and designing curriculum for students who want to learn entry-level skills about machine learning and embedded systems programming on edge devices.</p>
+                <p style="font-style: italic;"><a href="https://www.instagram.com/p/C3QWruSJMwa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" style="color: #3B7EA1;">Related post</a></p>
+            </div>
+        </div>
+        <h2 style="color: #003262;">Mentoring</h2>
+        <div class="entry">
+            <img src="Volunteer/Mentoring.png" alt="Mentor">
+            <div class="text">
+                <h3>I’ve had the privilege of working with some brilliant undergraduate students:</h3>
+                <p><a href="https://www.minh02.com" style="color: #3B7EA1;">Minh Nguyen</a> (Fall 2023 - Present) - Undergraduate at UC Berkeley -> MS in EECS at UC Berkeley</p>
+                <p>Widyadewi  Soedarmadji (Winter 2023 - Present) - Undergraduate at UC Berkeley -> PhD in CS at Tsinghua University</p>
+                <p>Yuxin Jin (Summer 2024 - Present) Tsinghua University -> Visiting Researcher UC Berkeley</p> 
+                <p>Chenxi Wan (Summer 2024 Present) Tsinghua University -> Visiting Researcher UC Berkeley</p>
+            </div>
+        </div>
+        <h2 style="color: #003262;">Volunteering</h2>
+        <div class="entry">
+            <img src="Volunteer/woi2.jpg" alt="WOI">
+            <div class="text">
+                <h3 style="color: #003262;">Tech Lead</h3>
+                <h4><a href="https://womenofisenberg.com/" style= "color: #3B7EA1;">Women of Isenberg Conference 2021</a></h4>
+                <h5>Led a team to organize three annual conferences, including virtual seminars and workshops, successfully raising $70,000 and maintaining brand identity through various promotional activities. </h5>
+            </div>
+        </div>
+        <div class="entry">
+            <img src="Volunteer/Tesla_Career.jpg" alt="Tesla_Career">
+            <div class="text">
+                <h3 style= "color: #003262;">Organizer</a></h3>
+                <h4><a href="https://www.tesla.com/event/uc-berkeley--eecs-career-fair" style= "color: #3B7EA1;">Tesla Career Day</a></h4>
+                <h5>Coordinated career fairs and networking events to promote company culture and career opportunities, mentored students, and engaged with local colleges and community organizations to build candidate pipelines. </h5>
+            </div>
+        </div>
+        <div class="entry">
+            <img src="Volunteer/Hacker413.png" alt="Hacker413">
+            <div class="text">
+                <h3 style="color: #003262;">Director</h3>
+                <h3><a href="https://www.hackher413.com/" style= "color: #3B7EA1;">Hack(H)er413</a></h3>
+                <h5>Directed a team to organize hackathons with diverse workshops and panels, supporting a community of over 1300 women and non-binary individuals in technology, and secured over $6000 in sponsorships.</h5>
+            </div>
+        </div>
+        <div class="entry">
+            <img src="Volunteer/ARPS.png" alt="ARPS">
+            <div class="text">
+                <h3 style="color: #003262;">Organizer</h3>
+                <h4>VELA Program of Amherst Regional Middle School</h4>
+                <h5>At the VELA Program of Amherst Regional Middle School, I organized afterschool clubs, assisted with curriculum implementation and homework support, monitored student progress, and participated in weekly reflection sessions and program evaluation.</h5>
+            </div>
+        </div>
+    </section>
+</div>
 
 </body>
 <footer>
-    &copy; 2024 Shengjun Kris Dong. All rights reserved.
+&copy; 2024 Shengjun Kris Dong. All rights reserved.
 </footer>
 </html>
