@@ -1,7 +1,6 @@
 # Personal Website
 
-This repository hosts the source code and deployment files for my personal website. It is built to showcase my portfolio, projects, and provide a platform to share insights through blogs.
-
+This repository is the template for my personal website. This project is deployed using GitHub Pages. Feel free to fork it and modify the source code and deployment files for your own personal/project page.
 ## Live Website
 
 You can visit the website at: [https://kris-dong.github.io/personal-website-page](https://kris-dong.github.io/personal-website-page)
