@@ -3,7 +3,7 @@
 This repository is the template for my personal website. This project is deployed using GitHub Pages. Feel free to fork it and modify the source code and deployment files for your own personal/project page.
 ## Live Website
 
-You can visit the website at: (https://people.eecs.berkeley.edu/~chrisdong/)](https://kris-dong.github.io/personal-website-page))
+You can visit the website at: [(https://people.eecs.berkeley.edu/~chrisdong/)]([https://kris-dong.github.io/personal-website-page](https://people.eecs.berkeley.edu/~chrisdong)
 
 ## Features
 
